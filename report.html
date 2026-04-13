@@ -1,1 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+          <ul class="nav-links">
+            <li><a href="index.html">Homepage</a></li>
+            <li><a href="board.html">Board</a></li>
+            <li><a href="report.html">Report</a></li>
+            <li><a href="about.html">About Us</a></li>
+          </ul>  
+        </div>
+    </nav>
+    <header>
+        <h1>Report an Item</h1>
+        <p>Fill in the details below to report a lost or found item</p>
+    </header>
+    <main>
+        <form class="report-form">
+            <label>Item Name</label>
+            <input type="text" placeholder="e.g wallet" required>
 
+            <label>Type</label>
+            <select required>
+                <option value="">Select</option>
+                <option value="Lost">Lost</option>
+                <option value="Found">Found</option>
+
+            </select>
+            <label>Description</label>
+            <textarea placeholder="Describe the item" required></textarea>
+
+            <label>Location</label>
+            <input type="text" placeholder="where was it lost/found" required>
+
+            <label>Contact Info</label>
+            <input type="text" placeholder="phone or email">
+
+            <button type="submit">Submit Report</button>
+        </form>
+    </main>
+    <footer>
+        &copy; 2026 Lost & Found Board
+    </footer>
+</body>
+</html>
