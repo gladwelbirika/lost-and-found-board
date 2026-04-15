@@ -10,7 +10,7 @@
     <nav class="navbar">
         <div class="nav-container">
           <ul class="nav-links">
-            <li><a href="index.html">Homepage</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="board.html">Board</a></li>
             <li><a href="report.html">Report</a></li>
             <li><a href="about.html">About Us</a></li>
@@ -24,23 +24,23 @@
     <main>
         <form class="report-form">
             <label>Item Name</label>
-            <input type="text" placeholder="e.g wallet" required>
+            <input type="text" id="itemName" placeholder="e.g wallet" required>
 
             <label>Type</label>
-            <select required>
+            <select id="type" required>
                 <option value="">Select</option>
                 <option value="Lost">Lost</option>
                 <option value="Found">Found</option>
 
             </select>
             <label>Description</label>
-            <textarea placeholder="Describe the item" required></textarea>
+            <textarea id="description" placeholder="Describe the item" required></textarea>
 
             <label>Location</label>
-            <input type="text" placeholder="where was it lost/found" required>
+            <input type="text" id="location" placeholder="where was it lost/found" required>
 
             <label>Contact Info</label>
-            <input type="text" placeholder="phone or email">
+            <input type="text" id="contact" placeholder="phone or email">
 
             <button type="submit">Submit Report</button>
         </form>
@@ -48,5 +48,8 @@
     <footer>
         &copy; 2026 Lost & Found Board
     </footer>
+    <script src="script.js">
+
+    </script>
 </body>
 </html>

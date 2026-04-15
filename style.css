@@ -1,0 +1,103 @@
+nav{
+
+}
+.navbar{
+    background-color: #2563EB;
+    padding: 15px;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+.nav-links a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+.nav-links a:hover{
+    text-decoration: underline;
+}
+body{
+    background-color: #F9FAFB;
+}
+header{
+    text-align: center;
+    padding: 40px 20px;
+}
+.btn{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2563EB;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px;
+}
+.btn:hover{
+    background-color: #1D4ED8;
+}
+section{
+    padding:40px 20px;
+    margin: 30px auto;
+    max-width: 1000px;
+}
+.board-container{
+    display: grid;
+    gap: 20px;
+}
+.item-card{
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid #2563EB;
+    box-shadow: 0 4px 10x rgba(0,0,0,0.1);
+
+}
+
+.lost{
+    border-left-color: #EF4444;
+}
+.found{
+    border-left-color: #10B981;
+}
+.report-form{
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+
+}
+.report-form label {
+    margin-top: 10px;
+}
+
+.report-form input,
+.report-form select,
+.report-form textarea{
+    padding: 8px;
+    margin-top: 5px;
+}
+
+.report-form button{
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #2563EB;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.report-form button:hover{
+    background-color: #1D4ED8;
+}
+footer{
+    text-align: center;
+    padding: 15px;
+    background-color: #E5E7EB;
+    margin-top: 20px;
+    position: absolute;
+    bottom: 0;
+}
