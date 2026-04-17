@@ -20,5 +20,6 @@ const item = {
 };
 
 let items = JSON.parse(localStorage.getItem("items")) || [];
+
 items.push(item);
 
