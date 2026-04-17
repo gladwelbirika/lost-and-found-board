@@ -12,9 +12,13 @@ const contact = document.getElementById("contact").value ;
 
 const item = {
     id:Date.now(),
-    name,
-    type,
-    description,
-    location,
-    contact
+    name:name,
+    type:type,
+    description:description,
+    location:location,
+    contact:contact
 };
+
+let items = JSON.parse(localStorage.getItem("items")) || [];
+items.push(item);
+
