@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Board</title>
+    <title>Report</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@500;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <nav class="navbar">
@@ -17,31 +19,34 @@
           </ul>  
         </div>
     </nav>
-    <header class="board-header">
-        <h1>Lost & Found Board</h1>
-        <p>Browse Lost and found items in your area.</p>
+    <header>
+        <h1>Report an Item</h1>
+        <p>Fill in the details below to report a lost or found item</p>
     </header>
+    <main>
+        <form class="report-form">
+            <label>Item Name</label>
+            <input type="text" id="itemName" placeholder="e.g wallet" required>
 
-    <section class="search-section">
-        <input type="text" id="search" placeholder="search items">
-    </section>
-        <main>
-            <section class="board-container">
-                <div class="item-card">
-                    <h3>Lost wallet</h3>
-                    <p>Black wallet lost near school gate.</p>
-                    <p><strong>Status:</strong>Lost</p>
-                </div>
+            <label>Type</label>
+            <select id="type" required>
+                <option value="">Select</option>
+                <option value="Lost">Lost</option>
+                <option value="Found">Found</option>
 
-                 <div class="item-card">
-                    <h3>Found Keys</h3>
-                    <p>Keys found in library area.</p>
-                    <p><strong>Status:</strong>Found</p>
-                </div>
+            </select>
+            <label>Description</label>
+            <textarea id="description" placeholder="Describe the item" required></textarea>
 
-            </section>
-        </main>
-    
+            <label>Location</label>
+            <input type="text" id="location" placeholder="where was it lost/found" required>
+
+            <label>Contact Info</label>
+            <input type="text" id="contact" placeholder="phone or email">
+
+            <button type="submit">Submit Report</button>
+        </form>
+    </main>
     <footer>
         &copy; 2026 Lost & Found Board
     </footer>
