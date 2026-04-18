@@ -46,7 +46,8 @@ function displayItems(){
     <p><strong>Status:</strong> ${item.type}</p>
     <p><strong>Contact:</strong> ${item.contact}</p>
     `;
-
+    container.appendChild(card);
+ 
 
    })
 
