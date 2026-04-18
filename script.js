@@ -58,5 +58,5 @@ displayItems();
 const searchInput = document.querySelector("input");
 searchInput.addEventListener("input", function(){
     const query = searchInput.value.toLowerCase();
-   
+    const cards = document.querySelectorAll(".item-card");
 })
