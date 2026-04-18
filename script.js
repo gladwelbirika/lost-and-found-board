@@ -3,6 +3,17 @@ async function fetchAPIItems(){
     const container = document.querySelector(".board-container");
     if(!container)return;
     const res = await fetch("https://jsonplaceholder.typicode.com/posts?_limit=2")
+    const data = await res.json();
+    data.forEach(post => {
+        const card = document.createElement("div");
+        card.classList.add("item-card");
+        card.innerHTML = `
+        <h3>${post.titile}</h3>
+        <p>${post.body}</p>
+        <p><strong>Status:</strong> API Item </p>
+        `
+    })
+
 }
 
 
