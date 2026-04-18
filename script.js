@@ -1,8 +1,8 @@
-const form = document.querySelector(".report- form");
+//report form submission handling
+const form = document.querySelector(".report-form");
 
 form.addEventListener("submit",function(event){
     event.preventDefault();
-});
 
 const name = document.getElementById("itemName").value ;
 const type = document.getElementById("type").value ;
@@ -25,4 +25,10 @@ items.push(item);
 
 localStorage.setItem("items", JSON.stringify(items));
 
-this.reset();
+form.reset();
+});
+
+//display reported items to the board page
+function displayItems(){
+    
+}
