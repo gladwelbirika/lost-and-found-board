@@ -57,5 +57,6 @@ displayItems();
 //Search bar
 const searchInput = document.querySelector("input");
 searchInput.addEventListener("input", function(){
-    
+    const query = searchInput.value.toLowerCase();
+   
 })
