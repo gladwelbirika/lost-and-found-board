@@ -30,5 +30,5 @@ form.reset();
 
 //display reported items to the board page
 function displayItems(){
-    
+   const container = document.querySelector(".board-container"); 
 }
