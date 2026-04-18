@@ -37,6 +37,8 @@ function displayItems(){
    items.forEach(item => {
     const card = document.createElement("div");
     card.classList.add("item-card");
+    card.classList.add(item.type.toLowerCase());
+
 
    })
 
