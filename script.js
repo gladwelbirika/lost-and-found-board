@@ -33,5 +33,9 @@ function displayItems(){
    const container = document.querySelector(".board-container"); 
    let items = JSON.parse(localStorage.getItem("items")) || [];
    container.innerHTML = "";
-   
+
+   items.forEach(item => {
+    
+   })
+
 }
