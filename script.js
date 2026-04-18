@@ -15,13 +15,8 @@ async function fetchAPIItems(){
     })
 
 }
-
-
-
-
-
-
-
+container.appendChild(card);
+fetchAPIItems();
 
 //report form submission handling
 const form = document.querySelector(".report-form");
