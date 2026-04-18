@@ -49,7 +49,7 @@ function displayItems(){
     container.appendChild(card);
  
 
-   })
+   });
 
 }
 displayItems();
@@ -59,4 +59,12 @@ const searchInput = document.querySelector("input");
 searchInput.addEventListener("input", function(){
     const query = searchInput.value.toLowerCase();
     const cards = document.querySelectorAll(".item-card");
-})
+
+    cards.forEach(card => {
+        const text = card.textContent.toLowerCase();
+        if(text.includes(query)){
+            card.style.display = "block";
+            card.style.display = "none";
+        }
+    })
+});
