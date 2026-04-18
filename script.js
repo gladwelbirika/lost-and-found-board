@@ -1,3 +1,17 @@
+//API
+async function fetchAPIItems(){
+    const container = document.querySelector(".board-container");
+    if(!container)return;
+    const res = await fetch("https://jsonplaceholder.typicode.com/posts?_limit=2")
+}
+
+
+
+
+
+
+
+
 //report form submission handling
 const form = document.querySelector(".report-form");
 
