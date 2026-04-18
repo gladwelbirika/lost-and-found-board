@@ -35,7 +35,9 @@ function displayItems(){
    container.innerHTML = "";
 
    items.forEach(item => {
-    
+    const card = document.createElement("div");
+    card.classList.add("item-card");
+
    })
 
 }
