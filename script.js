@@ -39,6 +39,14 @@ function displayItems(){
     card.classList.add("item-card");
     card.classList.add(item.type.toLowerCase());
 
+    card.innerHTML = `
+    <h3>${item.name}</h3>
+    <p>${item.description}</p>
+    <p><strong>Location:</strong> ${item.location}</p>
+    <p><strong>Status:</strong> ${item.type}</p>
+    <p><strong>Contact:</strong> ${item.contact}</p>
+    `;
+
 
    })
 
