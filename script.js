@@ -37,7 +37,8 @@ items.push({
     type,
     description,
     location,
-    contact
+    contact,
+    claimed:false
 });
 
 localStorage.setItem("items", JSON.stringify(items));
@@ -68,6 +69,16 @@ window.location.href = "board.html";
     <p><strong>Status:</strong> ${item.type}</p>
     <p><strong>Contact:</strong> ${item.contact}</p>
     `;
+
+    const claimBtn=document.createElement("button");
+    claimBtn.textContent = item.claimed ? "Claimed" : "claim Item";
+
+    const removeBtn = document.createElement("button");
+    removeBtn.textContent = "Remove"
+
+
+    div.appendChild(claimBtn);
+    div.appendChild(removeBtn)
     board.appendChild(div);
  
    });
@@ -105,9 +116,12 @@ searchInput.addEventListener("input", function(){
 }
 
 //unit testing
-function test(name,function){
+function test(name,condition){
     console.log(name + ":" + (condition ? "pass" : "fail"));
 }
+
+console.log("=== UNIT TESTS RUNNING ===");
+
 test("LocalStorage items should be a valid array",
     Array.isArray(JSON.parse(localStorage.getItem("items") || "[]"))
 );
