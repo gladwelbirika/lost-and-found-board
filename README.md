@@ -1,85 +1,62 @@
 # lost-and-found-board
-Lost & Found Board
+Lost & Found Board Website
 Project Description
 
-Lost & Found Board is a simple web application that helps people report and recover lost items within a community. Users can post details about items they have lost or found, browse the board to view reported items, and contact the person who reported the item.
+Lost & Found Board is a multi-page website designed to help users report and find lost items within a community. The platform allows users to post items they have lost or found, browse a shared board of items, and search for specific listings easily.
 
-The goal of the platform is to create a central place where community members can quickly report lost belongings and help return found items to their rightful owners.
+The goal of this project was to practice building a functional multi-page website using HTML, CSS, and JavaScript, including local storage and API integration.
 
 Features
-Report lost or found items using a form
-View reported items on a shared board
-Search for items using a search bar
-Store reported items using browser Local Storage
-Display external API data as example items
-Mark items as claimed
-Remove items from the board
-Responsive layout for different screen sizes
+Multi-page website with navigation links
+Home page introducing the platform
+Board page displaying lost and found items
+Report page for submitting new items
+About page explaining the platform
+Search functionality to filter items
+Local storage to save reported items
+Ability to mark items as claimed
+Ability to remove items from the board
+Display of sample API data
+Responsive design with clean UI
 Technologies Used
 HTML5
 CSS3
 JavaScript
 Local Storage
-GitHub Actions
 GitHub Pages
+GitHub Actions
+JSONPlaceholder API
+Website Pages
+
+Home (index.html):
+Introduces the Lost & Found Board and explains how the platform works.
+
+Board (board.html):
+Displays all reported lost and found items, including those stored in local storage and sample API data.
+
+Report (report.html):
+Allows users to submit details of lost or found items.
+
+About (about.html):
+Explains the purpose of the platform and its mission.
+
+Styling
+
+The website uses CSS to create:
+
+A responsive navigation bar
+Grid layout for item cards
+Styled forms for reporting items
+Hover effects for buttons and cards
+Clean and modern UI design
+Consistent color theme across pages
 API Used
 
-This project uses the JSONPlaceholder API to simulate external data.
-
-API endpoint used:
+JSONPlaceholder API
 https://jsonplaceholder.typicode.com/posts?_limit=2
 
-The API provides sample post data which is displayed as example items on the board.
-
-How It Works
-Reporting an Item
-
-Users fill in the report form with:
-
-Item name
-Type (Lost or Found)
-Description
-Location
-Contact information
-
-The item is saved to Local Storage and displayed on the board page.
-
-Viewing the Board
-
-The board page displays:
-
-Items stored in Local Storage
-Sample items fetched from the API
-
-Users can:
-
-Search items using the search bar
-Mark items as claimed
-Remove items from the board
-Search Function
-
-The search bar filters items by matching the entered text with the content inside each item card.
-
-Deployment
-
-This project is deployed using GitHub Pages with GitHub Actions.
-
-Deployment workflow:
-
-Code is pushed to the main branch.
-GitHub Actions runs the deployment workflow.
-The site is automatically deployed to GitHub Pages.
-Running the Project Locally
-Clone the repository
-Open the project folder
-Open index.html in a web browser
-
-No additional installation is required.
+Used to display sample items on the board page.
 
 Author
 
-Gladwel Birika
-
-License
-
-This project is created for educational purposes.
+Created by Gladwel Birika as a web development project.
