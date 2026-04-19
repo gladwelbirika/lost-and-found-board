@@ -76,6 +76,25 @@ window.location.href = "board.html";
     const removeBtn = document.createElement("button");
     removeBtn.textContent = "Remove"
 
+    claimBtn.addEventListener("click", () => {
+        let items = JSON.parse(localStorage.getItem("items")) || [];
+
+        items[index].claimed = true;
+        
+        localStorage.setItem("items", JSON.stringify(items));
+
+        displayItems(items);
+
+    });
+
+    removeBtn.addEventListener("click", () => {
+        let items = JSON.parse(localStorage.getItem("items")) || [];
+        items.splice(index, 1);
+
+        localStorage.setItem("items", JSON.stringify(items));
+        displayItems(items);
+    })
+
 
     div.appendChild(claimBtn);
     div.appendChild(removeBtn)
