@@ -108,3 +108,6 @@ searchInput.addEventListener("input", function(){
 function test(name,function){
     console.log(name + ":" + (condition ? "pass" : "fail"));
 }
+test("LocalStorage items should be a valid array",
+    Array.isArray(JSON.parse(localStorage.getItem("items") || "[]"))
+);
