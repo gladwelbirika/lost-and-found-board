@@ -58,7 +58,7 @@ window.location.href = "board.html";
      function displayItems(list){
         board.innerHTML = "";
 
-        list.forEach(item => {
+        list.forEach((item , index) => {
             const div = document.createElement("div");
             div.classList.add("item-card")
         
@@ -70,7 +70,7 @@ window.location.href = "board.html";
     <p><strong>Contact:</strong> ${item.contact}</p>
     `;
 
-    const claimBtn=document.createElement("button");
+    const claimBtn = document.createElement("button");
     claimBtn.textContent = item.claimed ? "Claimed" : "claim Item";
 
     const removeBtn = document.createElement("button");

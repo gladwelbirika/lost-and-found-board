@@ -5,7 +5,9 @@
 }
 .navbar{
     background-color: #2563EB;
-    padding: 15px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px 30px;
 }
 
 .nav-links{
@@ -102,6 +104,38 @@ section{
 
 }
 
+.item-card button {
+    margin: 10px 8px 0 0 ;
+    padding: 10px 14px;
+    border:none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.item-card button:first-of-type:hover{
+    background: #1D4ED8;
+    transform: translateY(-2px);
+}
+
+.item-card button:disabled{
+    background: white;
+    color: #10B981;
+    cursor: not-allowed;
+}
+
+.remove-btn {
+    background: #EF4444;
+    color: white;
+}
+
+.remove-btn:hover {
+    background: #DC2626;
+    transform: translateY(-2px);
+}
+
 .lost{
     border-left-color: #EF4444;
 }
@@ -154,11 +188,17 @@ footer{
     border: 1px solid #D1D5DB;
     border-radius: 8px;
     outline: none;
-    font-family: `Inter`;
+    font-family:'Inter', sans-serif ;
     font-size: 14px;
     transition:all 0.2s ease;
  }
  .search-bar:focus{
     border-color: #2563EB;
     box-shadow: 0 0 0 3px rgba(37,99,235,0.2);
+ }
+
+ img{
+    width:250px;
+    height:180px;
+    object-fit: cover;
  }
