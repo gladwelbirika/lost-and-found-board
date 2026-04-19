@@ -8,19 +8,19 @@ async function fetchAPIItems(){
         const card = document.createElement("div");
         card.classList.add("item-card");
         card.innerHTML = `
-        <h3>${post.titile}</h3>
+        <h3>${post.title}</h3>
         <p>${post.body}</p>
         <p><strong>Status:</strong> API Item </p>
-        `
+        `;
+        container.appendChild(card);
     })
 
 }
-container.appendChild(card);
-fetchAPIItems();
 
 //report form submission handling
 const form = document.querySelector(".report-form");
 
+if(form){
 form.addEventListener("submit",function(event){
     event.preventDefault();
 
@@ -30,61 +30,81 @@ const description = document.getElementById("description").value ;
 const location = document.getElementById("location").value ;
 const contact = document.getElementById("contact").value ;
 
-const item = {
-    id:Date.now(),
-    name:name,
-    type:type,
-    description:description,
-    location:location,
-    contact:contact
-};
-
 let items = JSON.parse(localStorage.getItem("items")) || [];
 
-items.push(item);
+items.push({
+    name,
+    type,
+    description,
+    location,
+    contact
+});
 
 localStorage.setItem("items", JSON.stringify(items));
 
-form.reset();
+alert("Item reported successfully!");
+
+window.location.href = "board.html";
 });
+}
+
 
 //display reported items to the board page
-function displayItems(){
-   const container = document.querySelector(".board-container"); 
-   let items = JSON.parse(localStorage.getItem("items")) || [];
-   container.innerHTML = "";
+  const board = document.querySelector(".board-container"); 
 
-   items.forEach(item => {
-    const card = document.createElement("div");
-    card.classList.add("item-card");
-    card.classList.add(item.type.toLowerCase());
+  if (board) {
+    
+     function displayItems(list){
+        board.innerHTML = "";
 
-    card.innerHTML = `
+        list.forEach(item => {
+            const div = document.createElement("div");
+            div.classList.add("item-card")
+        
+    div.innerHTML = `
     <h3>${item.name}</h3>
     <p>${item.description}</p>
     <p><strong>Location:</strong> ${item.location}</p>
     <p><strong>Status:</strong> ${item.type}</p>
     <p><strong>Contact:</strong> ${item.contact}</p>
     `;
-    container.appendChild(card);
+    board.appendChild(div);
  
-
    });
 
 }
-displayItems();
+
+let items = JSON.parse(localStorage.getItem("items")) || [];
+
+displayItems(items);
+
+fetchAPIItems();
+  }
 
 //Search bar
-const searchInput = document.querySelector("input");
+const searchInput = document.querySelector(".search-bar");
+
+if(searchInput){
 searchInput.addEventListener("input", function(){
-    const query = searchInput.value.toLowerCase();
+
+    const query = this.value.toLowerCase();
     const cards = document.querySelectorAll(".item-card");
 
     cards.forEach(card => {
+
         const text = card.textContent.toLowerCase();
+
         if(text.includes(query)){
             card.style.display = "block";
+        } else {
             card.style.display = "none";
+        
         }
-    })
+    });
 });
+}
+
+//unit testing
+function test(name,function){
+    console.log(name + ":" + (condition ? "pass" : "fail"));
+}
