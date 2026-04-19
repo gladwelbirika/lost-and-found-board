@@ -2,23 +2,26 @@
 Lost & Found Board Website
 Project Description
 
-Lost & Found Board is a multi-page website designed to help users report and find lost items within a community. The platform allows users to post items they have lost or found, browse a shared board of items, and search for specific listings easily.
+Lost & Found Board is a multi-page website for a fictional lost and found system. The website allows users to report lost or found items, view them on a shared board, and search through the items easily.
 
-The goal of this project was to practice building a functional multi-page website using HTML, CSS, and JavaScript, including local storage and API integration.
+The goal of this project was to practice building a structured website using HTML, CSS, and JavaScript with multiple pages and a consistent navigation system.
 
 Features
-Multi-page website with navigation links
+
+Responsive navigation bar with links to all pages
 Home page introducing the platform
 Board page displaying lost and found items
-Report page for submitting new items
+Report page for submitting items
 About page explaining the platform
-Search functionality to filter items
-Local storage to save reported items
-Ability to mark items as claimed
-Ability to remove items from the board
-Display of sample API data
-Responsive design with clean UI
+Search functionality for filtering items
+Smooth item cards with descriptions and status
+Ability to add items using a form
+Local storage support for saving items
+API integration to display sample items
+Buttons to claim and remove items
+
 Technologies Used
+
 HTML5
 CSS3
 JavaScript
@@ -26,37 +29,26 @@ Local Storage
 GitHub Pages
 GitHub Actions
 JSONPlaceholder API
+
 Website Pages
 
-Home (index.html):
-Introduces the Lost & Found Board and explains how the platform works.
-
-Board (board.html):
-Displays all reported lost and found items, including those stored in local storage and sample API data.
-
-Report (report.html):
-Allows users to submit details of lost or found items.
-
-About (about.html):
-Explains the purpose of the platform and its mission.
+Home (index.html): Introduction to the Lost & Found Board and how it works.
+Board (board.html): Displays all lost and found items.
+Report (report.html): Allows users to submit lost or found items.
+About (about.html): Explains what the platform is about.
 
 Styling
 
 The website uses CSS to create:
 
-A responsive navigation bar
-Grid layout for item cards
+Flexbox and grid layout for item cards
+Responsive navigation bar
 Styled forms for reporting items
-Hover effects for buttons and cards
-Clean and modern UI design
-Consistent color theme across pages
-API Used
-
-JSONPlaceholder API
-https://jsonplaceholder.typicode.com/posts?_limit=2
-
-Used to display sample items on the board page.
+Hover effects on buttons and cards
+Clean and simple UI design
 
 Author
 
 Created by Gladwel Birika as a web development project.
+
+
